@@ -24,8 +24,8 @@ namespace dokushu
 
         public static void Exec2()
         {
-            var str = "お問い合わせはhoge@example.comまで";
-            var rgx = new Regex(@"[a-z_0-9]+([-+.][a-z_0-9]+)*@[a-z_0-9]+([-.][a-z_0-9]+)*\.[a-z_0-9]+([-.][a-z_0-9]+)*");
+            var str = "お問い合わせはhogeHoge@example.comまで";
+            var rgx = new Regex(@"[a-z_0-9]+([-+.][a-z_0-9]+)*@[a-z_0-9]+([-.][a-z_0-9]+)*\.[a-z_0-9]+([-.][a-z_0-9]+)*", RegexOptions.IgnoreCase);
             Console.WriteLine(rgx.Replace(str, "<a href=\"mailto:$0\">$0</a>"));
         }
     }
