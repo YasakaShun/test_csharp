@@ -10,10 +10,12 @@ namespace dokushu
     {
         static void Main(string[] args)
         {
-            Kind kind = Kind.P5_2_2;
+            Kind kind = Kind.P5_1_2;
 
             switch (kind)
             {
+                case Kind.P5_1_1: Practice5_1.Exec1(); break;
+                case Kind.P5_1_2: Practice5_1.Exec2(); break;
                 case Kind.P5_2_1: Practice5_2.Exec1(); break;
                 case Kind.P5_2_2: Practice5_2.Exec2(); break;
                 default: break;
@@ -24,6 +26,8 @@ namespace dokushu
 
         private enum Kind
         {
+            P5_1_1,
+            P5_1_2,
             P5_2_1,
             P5_2_2,
         }
