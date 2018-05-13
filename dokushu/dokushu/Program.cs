@@ -10,7 +10,7 @@ namespace dokushu
     {
         static void Main(string[] args)
         {
-            Kind kind = Kind.P6_2_1;
+            Kind kind = Kind.T6_3;
 
             switch (kind)
             {
@@ -26,6 +26,8 @@ namespace dokushu
                 case Kind.T5_4: Test5.Exec4(); break;
                 case Kind.P6_1_2: Practice6_1.Exec2(); break;
                 case Kind.P6_2_1: Practice6_2.Exec1(); break;
+                case Kind.T6_2: Test6.Exec2(); break;
+                case Kind.T6_3: Test6.Exec3(); break;
                 default: break;
             }
 
@@ -46,6 +48,8 @@ namespace dokushu
             T5_4,
             P6_1_2,
             P6_2_1,
+            T6_2,
+            T6_3,
         }
     }
 }
