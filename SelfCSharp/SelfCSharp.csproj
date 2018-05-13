@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCB602B8-38F4-4163-BADF-ABA09E5355EF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SelfCSharp</RootNamespace>
+    <AssemblyName>SelfCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SelfCSharp.xml</DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SelfCSharp.Chap02.Const</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="IronPython, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronPython.2.7.7\lib\Net45\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronPython.2.7.7\lib\Net45\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.SQLite, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronPython.2.7.7\lib\Net45\IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronPython.2.7.7\lib\Net45\IronPython.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet, Version=1.1.1.21, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chap02\Const.cs" />
+    <Compile Include="Chap02\Parse.cs" />
+    <Compile Include="Chap01\Person.cs" />
+    <Compile Include="Chap02\Practice\PCast.cs" />
+    <Compile Include="Chap02\Practice\Practice1.cs" />
+    <Compile Include="Chap02\Practice\Practice3.cs" />
+    <Compile Include="Chap02\ToString.cs" />
+    <Compile Include="Chap03\CompareArray.cs" />
+    <Compile Include="Chap03\CompareDouble.cs" />
+    <Compile Include="Chap03\CompareString.cs" />
+    <Compile Include="Chap03\CompareStringBuilder.cs" />
+    <Compile Include="Chap03\ConcatBuilder.cs" />
+    <Compile Include="Chap03\ConcatString.cs" />
+    <Compile Include="Chap03\Condition.cs" />
+    <Compile Include="Chap03\ConditionNull.cs" />
+    <Compile Include="Chap03\Increment.cs" />
+    <Compile Include="Chap03\NameOfNull.cs" />
+    <Compile Include="Chap03\NameOfBasic.cs" />
+    <Compile Include="Chap03\Practice\PCondition.cs" />
+    <Compile Include="Chap03\Practice\Practice2.cs" />
+    <Compile Include="Chap03\Practice\Practice3.cs" />
+    <Compile Include="Chap03\Shortcut.cs" />
+    <Compile Include="Chap03\Substitution.cs" />
+    <Compile Include="Chap04\Break.cs" />
+    <Compile Include="Chap04\BreakNest.cs" />
+    <Compile Include="Chap04\CommandArgs.cs" />
+    <Compile Include="Chap04\Continue.cs" />
+    <Compile Include="Chap04\ForBad.cs" />
+    <Compile Include="Chap04\ForBasic.cs" />
+    <Compile Include="Chap04\ForBlock.cs" />
+    <Compile Include="Chap04\ForComma.cs" />
+    <Compile Include="Chap04\ForComma2.cs" />
+    <Compile Include="Chap04\Foreach.cs" />
+    <Compile Include="Chap04\ForeachFor.cs" />
+    <Compile Include="Chap04\ForFloat.cs" />
+    <Compile Include="Chap04\Goto.cs" />
+    <Compile Include="Chap04\GotoNest.cs" />
+    <Compile Include="Chap04\GotoSwitch.cs" />
+    <Compile Include="Chap04\IfBasic.cs" />
+    <Compile Include="Chap04\IfBasic2.cs" />
+    <Compile Include="Chap04\IfElse.cs" />
+    <Compile Include="Chap04\IfElse2.cs" />
+    <Compile Include="Chap04\IfNest.cs" />
+    <Compile Include="Chap04\IfOmit.cs" />
+    <Compile Include="Chap04\IfOmit2.cs" />
+    <Compile Include="Chap04\IfOmit3.cs" />
+    <Compile Include="Chap04\Practice\PContinue.cs" />
+    <Compile Include="Chap04\Practice\PFor.cs" />
+    <Compile Include="Chap04\Practice\PIf.cs" />
+    <Compile Include="Chap04\Practice\Practice1.cs" />
+    <Compile Include="Chap04\Practice\Practice2.cs" />
+    <Compile Include="Chap04\Practice\Practice4.cs" />
+    <Compile Include="Chap04\Practice\Practice3.cs" />
+    <Compile Include="Chap04\Practice\Practice5.cs" />
+    <Compile Include="Chap04\PreIf.cs" />
+    <Compile Include="Chap04\PreRegion.cs" />
+    <Compile Include="Chap04\SwitchBasic.cs" />
+    <Compile Include="Chap04\SwitchFall.cs" />
+    <Compile Include="Chap04\SwitchPre.cs" />
+    <Compile Include="Chap04\SwitchType.cs" />
+    <Compile Include="Chap04\SwitchWhen.cs" />
+    <Compile Include="Chap04\WhileBasic.cs" />
+    <Compile Include="Chap04\WhileDo.cs" />
+    <Compile Include="Chap04\WhileOmit.cs" />
+    <Compile Include="Chap05\ArrayExample.cs" />
+    <Compile Include="Chap05\DirectoryProcess.cs" />
+    <Compile Include="Chap05\DirectoryStaticProcess.cs" />
+    <Compile Include="Chap05\Factorial.cs" />
+    <Compile Include="Chap05\FileStaticProcess.cs" />
+    <Compile Include="Chap05\FileProcess.cs" />
+    <Compile Include="Chap05\MathExample.cs" />
+    <Compile Include="Chap05\Practice\PAdd.cs" />
+    <Compile Include="Chap05\Practice\PMatches.cs" />
+    <Compile Include="Chap05\Practice\PParse.cs" />
+    <Compile Include="Chap05\Practice\Practice1.cs" />
+    <Compile Include="Chap05\Practice\Practice2.cs" />
+    <Compile Include="Chap05\Practice\Practice3.cs" />
+    <Compile Include="Chap05\Practice\Practice4.cs" />
+    <Compile Include="Chap05\Practice\PReplace.cs" />
+    <Compile Include="Chap05\Practice\PSplit.cs" />
+    <Compile Include="Chap05\Practice\PSubstr.cs" />
+    <Compile Include="Chap05\RegEvaluate.cs" />
+    <Compile Include="Chap05\RegIgnore.cs" />
+    <Compile Include="Chap05\RegIsMatch.cs" />
+    <Compile Include="Chap05\RegLongest.cs" />
+    <Compile Include="Chap05\RegMatch.cs" />
+    <Compile Include="Chap05\RegMatches.cs" />
+    <Compile Include="Chap05\RegMulti.cs" />
+    <Compile Include="Chap05\RegReplace.cs" />
+    <Compile Include="Chap05\RegReplaceNamed.cs" />
+    <Compile Include="Chap05\RegSingle.cs" />
+    <Compile Include="Chap05\RegSplit.cs" />
+    <Compile Include="Chap05\StrAll.cs" />
+    <Compile Include="Chap05\StrAny.cs" />
+    <Compile Include="Chap05\StrCompare.cs" />
+    <Compile Include="Chap05\StrContains.cs" />
+    <Compile Include="Chap05\StreamRead.cs" />
+    <Compile Include="Chap05\StreamReadLine.cs" />
+    <Compile Include="Chap05\StreamWrite.cs" />
+    <Compile Include="Chap05\StreamWriteAll.cs" />
+    <Compile Include="Chap05\StrEmpty.cs" />
+    <Compile Include="Chap05\StrFor.cs" />
+    <Compile Include="Chap05\StrFormat.cs" />
+    <Compile Include="Chap05\StrGlobalCompare.cs" />
+    <Compile Include="Chap05\StrIndex.cs" />
+    <Compile Include="Chap05\StrInfoLength.cs" />
+    <Compile Include="Chap05\StrLength.cs" />
+    <Compile Include="Chap05\StrReplace.cs" />
+    <Compile Include="Chap05\StrSplit.cs" />
+    <Compile Include="Chap05\StrSubstring.cs" />
+    <Compile Include="Chap05\TimeExact.cs" />
+    <Compile Include="Chap05\TimeGet.cs" />
+    <Compile Include="Chap05\TimeJapanese.cs" />
+    <Compile Include="Chap05\TimeNew.cs" />
+    <Compile Include="Chap05\TimeNow.cs" />
+    <Compile Include="Chap05\TimeOpe.cs" />
+    <Compile Include="Chap05\TimeParse.cs" />
+    <Compile Include="Chap05\TimeParseTry.cs" />
+    <Compile Include="Chap05\TimeSpanAdd.cs" />
+    <Compile Include="Chap05\TimeString.cs" />
+    <Compile Include="Chap05\TimeStringCulture.cs" />
+    <Compile Include="Chap05\TimeSub.cs" />
+    <Compile Include="Chap09\MyPartialMethod2.cs" />
+    <Compile Include="Chap10\LinqQueryDelay.cs" />
+    <Compile Include="Chap10\LinqStartsWith.cs" />
+    <Compile Include="Chap10\ListConvert.cs" />
+    <Compile Include="Chap10\ListExists.cs" />
+    <Compile Include="Chap10\ListFind.cs" />
+    <Compile Include="Chap10\ListFindAll.cs" />
+    <Compile Include="Chap10\ListFindIndex.cs" />
+    <Compile Include="Chap10\ListForeach.cs" />
+    <Compile Include="Chap10\ListRemove.cs" />
+    <Compile Include="Chap06\ListBasic.cs" />
+    <Compile Include="Chap06\ListLinked.cs" />
+    <Compile Include="Chap06\ListQueue.cs" />
+    <Compile Include="Chap06\ListSort.cs" />
+    <Compile Include="Chap06\ListSort2.cs" />
+    <Compile Include="Chap06\ListStack.cs" />
+    <Compile Include="Chap06\DicBasic.cs" />
+    <Compile Include="Chap06\MapSorted.cs" />
+    <Compile Include="Chap06\MapSorted2.cs" />
+    <Compile Include="Chap06\Practice\PList.cs" />
+    <Compile Include="Chap06\Practice\Practice2.cs" />
+    <Compile Include="Chap06\Practice\Practice3.cs" />
+    <Compile Include="Chap06\SetBasic.cs" />
+    <Compile Include="Chap06\SetSorted.cs" />
+    <Compile Include="Chap07\AccessBasic.cs" />
+    <Compile Include="Chap07\AnonymousBasic.cs" />
+    <Compile Include="Chap07\AnonymousShort.cs" />
+    <Compile Include="Chap07\ArgsNamed.cs" />
+    <Compile Include="Chap07\ArgsParams.cs" />
+    <Compile Include="Chap07\ArgsParamsBad.cs" />
+    <Compile Include="Chap07\ArgsParamsGood.cs" />
+    <Compile Include="Chap07\ConstantsBasic.cs" />
+    <Compile Include="Chap07\ConstractorStatic.cs" />
+    <Compile Include="Chap07\ConstructorBasic.cs" />
+    <Compile Include="Chap07\IteratorPrime.cs" />
+    <Compile Include="Chap07\IteratorBasic.cs" />
+    <Compile Include="Chap07\IteratorPrime2.cs" />
+    <Compile Include="Chap07\Practice\PCalculation.cs" />
+    <Compile Include="Chap07\Practice\Practice3.cs" />
+    <Compile Include="Chap07\Practice\Practice4.cs" />
+    <Compile Include="Chap07\Practice\PStatic.cs" />
+    <Compile Include="Chap07\Practice\PTuple.cs" />
+    <Compile Include="Chap07\ScopeBlock2.cs" />
+    <Compile Include="Chap07\ScopeBlock3.cs" />
+    <Compile Include="Chap07\StaticBasic.cs" />
+    <Compile Include="Chap07\MethodLocal.cs" />
+    <Compile Include="Chap07\MyConfig.cs" />
+    <Compile Include="Chap07\MySingleton.cs" />
+    <Compile Include="Chap09\OpeCast.cs" />
+    <Compile Include="Chap09\OpeCast2.cs" />
+    <Compile Include="Chap09\OpePlus.cs" />
+    <Compile Include="Chap09\OpeIncrement.cs" />
+    <Compile Include="Chap09\OpeOverload.cs" />
+    <Compile Include="Chap09\OpeBool.cs" />
+    <Compile Include="Chap07\PassBasic.cs" />
+    <Compile Include="Chap07\PassArray.cs" />
+    <Compile Include="Chap07\PassOut.cs" />
+    <Compile Include="Chap07\PassRefBasic.cs" />
+    <Compile Include="Chap07\PassRefArray.cs" />
+    <Compile Include="Chap07\PassRefReturn.cs" />
+    <Compile Include="Chap07\ClassBasic.cs" />
+    <Compile Include="Chap07\FieldStatic.cs" />
+    <Compile Include="Chap07\FieldBasic.cs" />
+    <Compile Include="Chap07\ArgsDefault.cs" />
+    <Compile Include="Chap07\MethodBasic.cs" />
+    <Compile Include="Chap07\ConstBasic.cs" />
+    <Compile Include="Chap07\Practice\PCircle.cs" />
+    <Compile Include="Chap07\Practice\PClass.cs" />
+    <Compile Include="Chap07\AnonymousBad.cs" />
+    <Compile Include="Chap07\AnonymousInit.cs" />
+    <Compile Include="Chap07\DestructorBasic.cs" />
+    <Compile Include="Chap07\TupleBasic.cs" />
+    <Compile Include="Chap08\IndexerBasic.cs" />
+    <Compile Include="Chap08\IndexerCircle.cs" />
+    <Compile Include="Chap08\IndexerMulti.cs" />
+    <Compile Include="Chap08\IndexerString.cs" />
+    <Compile Include="Chap08\ClassField.cs" />
+    <Compile Include="Chap08\Practice\Practice2.cs" />
+    <Compile Include="Chap08\Practice\Practice3.cs" />
+    <Compile Include="Chap08\Practice\Practice4.cs" />
+    <Compile Include="Chap08\Practice\Practice5.cs" />
+    <Compile Include="Chap08\PropAccess.cs" />
+    <Compile Include="Chap07\ScopeBasic.cs" />
+    <Compile Include="Chap07\ScopeBlock.cs" />
+    <Compile Include="Chap06\ListForeach.cs" />
+    <Compile Include="Chap08\AbstractBasic.cs" />
+    <Compile Include="Chap08\InheritBasic.cs" />
+    <Compile Include="Chap08\CastUp.cs" />
+    <Compile Include="Chap08\InheritNg.cs" />
+    <Compile Include="Chap08\ConstArgs.cs" />
+    <Compile Include="Chap08\ConstNoArgs.cs" />
+    <Compile Include="Chap08\DestNoArgs.cs" />
+    <Compile Include="Chap08\InheritBaseCall.cs" />
+    <Compile Include="Chap08\InterfaceBasic.cs" />
+    <Compile Include="Chap08\InterfaceOverlap.cs" />
+    <Compile Include="Chap08\MethodNoOverride.cs" />
+    <Compile Include="Chap08\OverrideBasic.cs" />
+    <Compile Include="Chap08\PolymorphismBasic.cs" />
+    <Compile Include="Chap08\PropAuto.cs" />
+    <Compile Include="Chap08\PropBasic.cs" />
+    <Compile Include="Chap08\StringExtensions.cs" />
+    <Compile Include="Chap08\TypeDifference.cs" />
+    <Compile Include="Chap08\TypeGetBasic.cs" />
+    <Compile Include="Chap11\DynamicBasic.cs" />
+    <Compile Include="Chap11\DynamicCreate.cs" />
+    <Compile Include="Chap11\DynamicMethod.cs" />
+    <Compile Include="Chap11\DynamicParse.cs" />
+    <Compile Include="Chap11\EventBasic.cs" />
+    <Compile Include="Chap11\EventUse.cs" />
+    <Compile Include="Chap11\ExpandoBasic.cs" />
+    <Compile Include="Chap09\FileInfo.cs" />
+    <Compile Include="Chap09\GenericsConstraint.cs" />
+    <Compile Include="Chap09\GenericsConstraintNew.cs" />
+    <Compile Include="Chap09\ObjEqualsSafe.cs" />
+    <Compile Include="Chap09\Practice\PEnum.cs" />
+    <Compile Include="Chap09\Practice\PGenerics.cs" />
+    <Compile Include="Chap09\Practice\Practice3.cs" />
+    <Compile Include="Chap09\Practice\Practice4.cs" />
+    <Compile Include="Chap09\TryCatchOrder.cs" />
+    <Compile Include="Chap09\MyAppException.cs" />
+    <Compile Include="Chap09\MyPartial1.cs" />
+    <Compile Include="Chap09\MyPartial2.cs" />
+    <Compile Include="Chap09\MyPartialClient.cs" />
+    <Compile Include="Chap09\MyPartialMethod.cs" />
+    <Compile Include="Chap09\NamespaceAlias.cs" />
+    <Compile Include="Chap09\NamespaceAlias2.cs" />
+    <Compile Include="Chap09\NamespaceBasic.cs" />
+    <Compile Include="Chap09\NamespaceGlobal.cs" />
+    <Compile Include="Chap09\NamespaceModifier.cs" />
+    <Compile Include="Chap09\NamespacePriority.cs" />
+    <Compile Include="Chap09\NamespaceSame.cs" />
+    <Compile Include="Chap09\NestedAccess.cs" />
+    <Compile Include="Chap09\NestedBasic.cs" />
+    <Compile Include="Chap09\Overflow.cs" />
+    <Compile Include="Chap09\OverflowDouble.cs" />
+    <Compile Include="Chap09\OverflowUnchecked.cs" />
+    <Compile Include="Chap09\StructBasic.cs" />
+    <Compile Include="Chap09\StructConstructor.cs" />
+    <Compile Include="Chap09\ThrowRe.cs" />
+    <Compile Include="Chap09\TryBad.cs" />
+    <Compile Include="Chap09\TryCatch.cs" />
+    <Compile Include="Chap09\TryFinally.cs" />
+    <Compile Include="Chap09\TryMulti.cs" />
+    <Compile Include="Chap09\TryWhen.cs" />
+    <Compile Include="Chap09\UsingStatic.cs" />
+    <Compile Include="Chap11\AttrBasic.cs" />
+    <Compile Include="Chap11\AttrConditional.cs" />
+    <Compile Include="Chap11\AttrUse.cs" />
+    <Compile Include="Chap11\MyEvent.cs" />
+    <Compile Include="Chap11\Practice\Practice2.cs" />
+    <Compile Include="Chap11\Practice\Practice4.cs" />
+    <Compile Include="Chap11\PythonCall.cs" />
+    <Compile Include="Chap11\ReflectBasic.cs" />
+    <Compile Include="Chap11\ReflectInvoke.cs" />
+    <Compile Include="Chap11\ReflectMethods.cs" />
+    <Compile Include="Chap11\VersionAttribute.cs" />
+    <Compile Include="Chap10\LambdaMember.cs" />
+    <Compile Include="Chap10\Practice\Practice3.cs" />
+    <Compile Include="Chap11\AsyncBasic.cs" />
+    <Compile Include="Chap11\AsyncHttp.cs" />
+    <Compile Include="Chap11\AsyncReturn.cs" />
+    <Compile Include="Chap11\LockBasic.cs" />
+    <Compile Include="Chap11\LockBasicBad.cs" />
+    <Compile Include="Chap11\ThreadBasic.cs" />
+    <Compile Include="Chap11\ThreadClassic.cs" />
+    <Compile Include="DynamicJson.cs" />
+    <Compile Include="Chap08\ExtensionClient.cs" />
+    <Compile Include="Chap10\DelegateAnonymous.cs" />
+    <Compile Include="Chap10\DelegateBasic.cs" />
+    <Compile Include="Chap10\DelegateLambda.cs" />
+    <Compile Include="Chap10\DelegateMulti.cs" />
+    <Compile Include="Chap10\DelegateMultiResult.cs" />
+    <Compile Include="Chap10\DelegateNoUse.cs" />
+    <Compile Include="Chap10\DelegateUse.cs" />
+    <Compile Include="Chap10\DelegateUseCounter.cs" />
+    <Compile Include="Chap09\EnumParse.cs" />
+    <Compile Include="Chap09\EnumString.cs" />
+    <Compile Include="Chap09\EnumValues.cs" />
+    <Compile Include="Chap09\EnumBit.cs" />
+    <Compile Include="Chap09\SeasonEnum.cs" />
+    <Compile Include="Chap09\SeasonConst.cs" />
+    <Compile Include="Chap10\AppTables.cs" />
+    <Compile Include="Chap10\LinqBetween.cs" />
+    <Compile Include="Chap10\LinqDistinct.cs" />
+    <Compile Include="Chap10\LinqFirst.cs" />
+    <Compile Include="Chap10\LinqGroup.cs" />
+    <Compile Include="Chap10\LinqGroup2.cs" />
+    <Compile Include="Chap10\LinqGroupMulti.cs" />
+    <Compile Include="Chap10\LinqIn.cs" />
+    <Compile Include="Chap10\LinqInto.cs" />
+    <Compile Include="Chap10\LinqInto2.cs" />
+    <Compile Include="Chap10\LinqJoin.cs" />
+    <Compile Include="Chap10\LinqLike.cs" />
+    <Compile Include="Chap10\LinqOrder.cs" />
+    <Compile Include="Chap10\LinqQuery.cs" />
+    <Compile Include="Chap10\LinqSelect.cs" />
+    <Compile Include="Chap10\LinqSingle.cs" />
+    <Compile Include="Chap10\LinqSkip.cs" />
+    <Compile Include="Chap09\ObjBoxing.cs" />
+    <Compile Include="Chap09\ObjString.cs" />
+    <Compile Include="Chap09\ObjEquals.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Chap05\TimeAdd.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Chap05\copy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chap11\hello.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Chap11\myClass.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

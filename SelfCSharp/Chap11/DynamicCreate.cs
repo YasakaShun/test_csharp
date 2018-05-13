@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
+
+namespace SelfCSharp.Chap11
+{
+    class FreeMember : DynamicObject
+    {
+        private Dictionary<string, object> items;
+
+        public FreeMember()
+        {
+            this.items = new Dictionary<string, object>();
+        }
+
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            this.items[binder.Name] = value;
+            return true;
+        }
+
+        public override bool TryGetMember(GetMemberBinder binder,
+          out object result)
+        {
+            if (!this.items.TryGetValue(binder.Name, out result))
+            {
+                result = null;
+            }
+            return true;
+        }
+    }
+
+    class DynamicCreate
+    {
+        static void Main(string[] args)
+        {
+            dynamic d = new FreeMember();
+            d.Count = 1;
+            d.Name = "山田";
+            Console.WriteLine(d.Count);
+            Console.WriteLine(d.Name);
+        }
+    }
+}
